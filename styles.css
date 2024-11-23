@@ -1,0 +1,117 @@
+@import "compass/css3";
+
+body{
+    background:radial-gradient(2005 100% at bottom center,#F7F7B6,#E96F92,#75517D,#1B2947);
+    background:radial-gradient(220% 105% at top center,#1B2947 10%,#75517d 40%, #E96F92 65%, #F7F7B6);
+background-attachment: fixed;
+overflow: hidden;
+font-family:'Aaron Sans', sans-serif;
+}
+@keyframes rotate{
+    0%{
+        transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+    }
+    100%{
+        transform:perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg)
+    }
+}
+.stars{
+    transform:perspective(500px);
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom:0;
+    perspective-origin: 50% 100%;
+    left:50%;
+    animation:rotate 90s infinite linear;
+}
+.star{
+    width: 2px;
+    height: 2px;
+    background:#F7F7B6;
+    position: absolute;
+    top:0;
+    left: 0;
+    transform-origin: 0 0 -300px;
+    transform: translate3d(0,0,-300px);
+    backface-visibility: hidden;
+}
+.profile-pic{
+border-radius: 50%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width:30%;
+}
+.border{
+position: absolute;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+padding: 40px 30px;
+border-radius:5px ;
+backdrop-filter: blur(3px);
+background: rgba(255, 255, 255, 0.2);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+width: 90%;
+text-align: center;
+outline: 3px solid black;
+max-width:500px;
+}
+.border h1{
+    margin:0 0 30px;
+    font-size: 2.2em;
+}
+.links ul{
+list-style: none;
+padding:0;
+margin:0; 
+}
+.links ul li{
+    margin:15px 0;
+}
+.links ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #75517D, #E96F92);
+    border-radius: 12px;
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+.links ul li a:hover{
+    background-color: linear-gradient(135deg, #E96F92, #F7F7B6);
+    transform:  scale(1.05);
+}
+.links h2{
+    font-size: large;
+}
+.socials {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.socials li {
+    display:inline-block;
+    flex:1;
+    text-align: center;
+}
+.socials li a{
+text-decoration: none;
+color: #fff;
+font-size: 2em;
+padding:10px;
+transition:transform 0.3s, background 0.3s;
+display:inline-block;
+}
+.socials li a:hover{
+    transform:scale(1.2);
+}
+.socials img{
+width: 20%;
+height: auto;
+}
