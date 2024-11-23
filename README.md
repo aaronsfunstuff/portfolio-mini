@@ -19,7 +19,7 @@ This is a personal link tree-style webpage where I showcase links to my social m
 3. Edit the links in the HTML to your own social media and porfolio URLs.🔧
 4. Customiz the design in `styles.css` to match your preferences.🎨
 
-###Preview
+### Preview:
 [Here](https://aaronsfunstuff.github.io/portfolio-mini/)
 ### License 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details. 📝
